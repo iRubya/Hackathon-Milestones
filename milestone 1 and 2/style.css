@@ -1,0 +1,111 @@
+/* General layout for the container */
+.resume-container {
+    display: flex;
+    width: 90%; /* Overall width of the container */
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensures clean boundaries */
+    background-color: #fff;
+}
+
+/* Left section styling */
+.left-section {
+    background-color: #180472c7;
+    color: rgba(255, 255, 255, 0.788);
+    flex: 1; /* Left section takes less space */
+    max-width: 25%; /* Left section constrained to 25% */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-picture {
+    width: 100px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 3px solid #000000;
+    margin: 20px 0;
+}
+
+.left-section h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    color: #0a0a0a;
+    border-bottom: 1px solid #444;
+    padding-bottom: 5px;
+}
+
+.left-section p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Right section styling */
+.right-section {
+    flex: 3; /* Right section takes more space */
+    padding: 30px;
+    background-color: #e4e4f8;
+    color: #080808;
+}
+
+/* Headings inside the right section */
+.right-section h1 {
+    font-size: 28px;
+    color: #080808;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.right-section h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #030303;
+    padding-bottom: 5px;
+}
+
+/* Text content inside the right section */
+.right-section p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    text-align: justify;
+    color: #555;
+}
+
+/* Links inside the right section */
+.right-section a {
+    color: #180472c7;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.right-section a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .resume-container {
+        flex-direction: column; /* Stack sections vertically */
+    }
+
+    .left-section {
+        flex: none;
+        width: 100%; /* Full width on small screens */
+        padding: 15px;
+    }
+
+    .right-section {
+        flex: none;
+        width: 100%; /* Full width on small screens */
+        padding: 20px;
+    }
+}
+
